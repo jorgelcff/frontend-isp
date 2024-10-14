@@ -1,0 +1,262 @@
+<h2 mat-dialog-title>
+  {{ data ? "Editar Apreensão" : "Adicionar Apreensão" }}
+</h2>
+<form [formGroup]="apreensaoForm" (ngSubmit)="onSubmit()">
+  <mat-dialog-content
+    class="gap-2"
+    style="display: flex; flex-wrap: wrap; justify-content: space-evenly"
+  >
+    <mat-form-field appearance="fill">
+      <mat-label>CISP</mat-label>
+      <input matInput formControlName="cisp" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>AISP</mat-label>
+      <input matInput formControlName="aisp" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>RISP</mat-label>
+      <input matInput formControlName="risp" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ano</mat-label>
+      <input matInput type="number" formControlName="ano" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Mês</mat-label>
+      <input matInput type="number" formControlName="mes" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Fabricação Caseira</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="arma_fogo_arma_fabricacao_caseira"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Carabina</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_carabina" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Espingarda</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_espingarda" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Fuzil</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_fuzil" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Garrucha</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_garrucha" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Garruchão</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_garruchao" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Metralhadora</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_metralhadora" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Outros</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_outros" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Pistola</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_pistola" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Revolver</mat-label>
+      <input matInput type="number" formControlName="arma_fogo_revolver" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma de Fogo - Submetralhadora</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="arma_fogo_submetralhadora"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Arma Branca Total</mat-label>
+      <input matInput type="number" formControlName="arma_branca_total" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Artefato Explosivo - Armadilha Explosiva</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="artefato_explosivo_armadilha_explosiva"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Artefato Explosivo - Armadilha Incendiária</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="artefato_explosivo_armadilha_incendiaria"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Artefato Explosivo - Bomba de Fabricação Caseira</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="artefato_explosivo_bomba_fabricacao_caseira"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Artefato Explosivo - Granada</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="artefato_explosivo_granada"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Artefato Explosivo - Material Bélico Explosivo</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="artefato_explosivo_material_belico_explosivo"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Artefato Explosivo - Material Explosivo</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="artefato_explosivo_material_explosivo"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Artefato Explosivo - Material Explosivo Caseiro</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="artefato_explosivo_material_explosivo_caseiro"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Artefato Explosivo - Material Não Identificado</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="artefato_explosivo_material_nao_identificado"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Municação Total</mat-label>
+      <input matInput type="number" formControlName="municao_total" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Airsoft</mat-label>
+      <input matInput type="number" formControlName="simulacro_airsoft" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Arma de Fabricação Caseira</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="simulacro_arma_fabricacao_caseira"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Carabina</mat-label>
+      <input matInput type="number" formControlName="simulacro_carabina" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Espingarda</mat-label>
+      <input matInput type="number" formControlName="simulacro_espingarda" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Fuzil</mat-label>
+      <input matInput type="number" formControlName="simulacro_fuzil" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Garrucha</mat-label>
+      <input matInput type="number" formControlName="simulacro_garrucha" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Garruchão</mat-label>
+      <input matInput type="number" formControlName="simulacro_garruchao" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Metralhadora</mat-label>
+      <input matInput type="number" formControlName="simulacro_metralhadora" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Outros</mat-label>
+      <input matInput type="number" formControlName="simulacro_outros" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Paintball</mat-label>
+      <input matInput type="number" formControlName="simulacro_paintball" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Pistola</mat-label>
+      <input matInput type="number" formControlName="simulacro_pistola" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Revolver</mat-label>
+      <input matInput type="number" formControlName="simulacro_revolver" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Submetralhadora</mat-label>
+      <input
+        matInput
+        type="number"
+        formControlName="simulacro_submetralhadora"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Simulacro - Total</mat-label>
+      <input matInput type="number" formControlName="simulacro_total" />
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancelar</button>
+    <button mat-button type="submit" color="primary">Salvar</button>
+  </mat-dialog-actions>
+</form>

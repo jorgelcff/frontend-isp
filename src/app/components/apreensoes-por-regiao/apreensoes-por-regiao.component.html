@@ -1,0 +1,16 @@
+<div class="container mx-auto">
+  <h3 class="text-xl font-bold mb-4">Apreensões por Região Total</h3>
+  <div class="overflow-x-auto">
+    <div [style.width.px]="5000" [style.height.px]="getHalfWindowHeight()">
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [type]="barChartType"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

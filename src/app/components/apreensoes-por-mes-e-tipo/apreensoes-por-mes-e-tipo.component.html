@@ -1,0 +1,12 @@
+<div class="container mx-auto">
+  <h3 class="text-xl font-bold mb-4">Apreensões por Mês e Tipo</h3>
+  <canvas
+    baseChart
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [legend]="barChartLegend"
+    [type]="barChartType"
+  >
+  </canvas>
+</div>

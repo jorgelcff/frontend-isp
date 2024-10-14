@@ -1,0 +1,26 @@
+<div class="container mx-auto">
+  <h3 class="text-xl font-bold mb-4">
+    Relatório Anual -
+    <select
+      id="ano-select"
+      (change)="onAnoChange($event)"
+      class="border p-2 mb-4"
+    >
+      <option *ngFor="let ano of anosDisponiveis" [value]="ano">
+        {{ ano }}
+      </option>
+    </select>
+  </h3>
+
+  <div *ngIf="relatorio; else loading">
+    <p>Total Apreensões: {{ relatorio.totalApreensoes }}</p>
+    <p>Total Armas de Fogo: {{ relatorio.totalArmasDeFogo }}</p>
+    <p>Total Armas Brancas: {{ relatorio.totalArmasBrancas }}</p>
+    <p>Total Artefatos Explosivos: {{ relatorio.totalArtefatosExplosivos }}</p>
+    <p>Total Munições: {{ relatorio.totalMunicoes }}</p>
+  </div>
+
+  <ng-template #loading>
+    <p>Carregando o relatório...</p>
+  </ng-template>
+</div>

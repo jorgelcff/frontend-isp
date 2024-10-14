@@ -1,0 +1,50 @@
+<div class="container mx-auto my-5">
+  <h2 class="text-2xl font-bold mb-4">Inserir Nova Apreensão</h2>
+
+  <form [formGroup]="armasForm" (ngSubmit)="onSubmit()">
+    <div class="grid grid-cols-1 gap-4 mb-4">
+      <label class="block">
+        CISP:
+        <input formControlName="cisp" class="w-full px-4 py-2 border rounded" />
+      </label>
+
+      <label class="block">
+        AISP:
+        <input formControlName="aisp" class="w-full px-4 py-2 border rounded" />
+      </label>
+
+      <label class="block">
+        Ano:
+        <input formControlName="ano" class="w-full px-4 py-2 border rounded" />
+      </label>
+
+      <label class="block">
+        Arma de Fogo:
+        <input
+          formControlName="arma_fogo_total"
+          class="w-full px-4 py-2 border rounded"
+        />
+      </label>
+
+      <label class="block">
+        Arma Branca:
+        <input
+          formControlName="arma_branca_total"
+          class="w-full px-4 py-2 border rounded"
+        />
+      </label>
+
+      <label class="block">
+        Artefatos Explosivos:
+        <input
+          formControlName="artefato_explosivo_total"
+          class="w-full px-4 py-2 border rounded"
+        />
+      </label>
+    </div>
+
+    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">
+      Inserir
+    </button>
+  </form>
+</div>
