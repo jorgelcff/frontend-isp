@@ -6,8 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ArmasService {
-  private apiUrl =
-    'https://e752-2804-29b8-51df-3b1d-6403-773c-efba-4179.ngrok-free.app/isp/armas';
+  private apiUrl = 'https://isp-backend-g0jl.onrender.com/isp/armas';
 
   constructor(private http: HttpClient) {}
 
@@ -97,7 +96,7 @@ export class ArmasService {
   }
 
   // askLLM(question: string): Observable<any> {
-  //   return this.http.post(`http://localhost:3000/llm/consultar`, {
+  //   return this.http.post(`https://isp-backend-g0jl.onrender.com/llm/consultar`, {
   //     pergunta: question,
   //   });
   // }
